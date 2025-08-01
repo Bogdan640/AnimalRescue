@@ -7,6 +7,7 @@ public class CannedFood extends AnimalFood {
     private String canSize;
     private String flavour;
 
+    public CannedFood() {}
 
     public CannedFood(String canSize, String flavour) {
         this.canSize = canSize;
