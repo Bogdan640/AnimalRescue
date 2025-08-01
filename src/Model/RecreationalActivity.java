@@ -10,7 +10,6 @@ public class RecreationalActivity {
         this.name = name;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
