@@ -8,8 +8,10 @@ public abstract class Animal {
     private int healthLevel;
     private int hungerLevel;
     private int moodLevel;
+    private int scareLevel;
     private String favouriteFood;
     private String favouriteRecreationalActivity;
+
 
     public Animal() {
     }
@@ -41,6 +43,15 @@ public abstract class Animal {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public int getScareLevel() {
+        return scareLevel;
+    }
+
+    public void setScareLevel(int scareLevel) {
+        this.scareLevel = scareLevel;
+    }
+
 
     public int getHealthLevel() {
         return healthLevel;
