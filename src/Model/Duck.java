@@ -6,7 +6,7 @@ public class Duck extends Bird {
     public Duck() {
     }
     public Duck(String name, int age, int healthLevel, int hungerLevel, int moodLevel, String favouriteFood,
-                String favouriteRecreationalActivity, String species, String wingSpan, int speed) {
+                String favouriteRecreationalActivity, String species, float wingSpan, int speed) {
         super(name, age, healthLevel, hungerLevel, moodLevel, favouriteFood, favouriteRecreationalActivity, species, wingSpan);
         this.speed = speed;
     }

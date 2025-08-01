@@ -2,13 +2,13 @@ package Model;
 
 public class Bird extends Animal {
     private String species;
-    private String wingSpan;
+    private float wingSpan;
 
     public Bird() {
     }
 
     public Bird(String name, int age, int healthLevel, int hungerLevel, int moodLevel, String favouriteFood,
-                String favouriteRecreationalActivity, String species, String wingSpan) {
+                String favouriteRecreationalActivity, String species, float wingSpan) {
         super(name, age, healthLevel, hungerLevel, moodLevel, favouriteFood, favouriteRecreationalActivity);
         this.species = species;
         this.wingSpan = wingSpan;
@@ -22,11 +22,11 @@ public class Bird extends Animal {
         this.species = species;
     }
 
-    public String getWingSpan() {
+    public float getWingSpan() {
         return wingSpan;
     }
 
-    public void setWingSpan(String wingSpan) {
+    public void setWingSpan(float wingSpan) {
         this.wingSpan = wingSpan;
     }
 

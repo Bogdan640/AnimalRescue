@@ -6,6 +6,8 @@ public class DryFood extends AnimalFood{
     public String bagSize;
     public String flavour;
 
+    public DryFood() {}
+
     public DryFood(String bagSize, String flavour) {
         this.bagSize = bagSize;
         this.flavour = flavour;
