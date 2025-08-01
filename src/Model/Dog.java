@@ -40,29 +40,6 @@ public class Dog extends Animal{
         this.weight = weight;
     }
 
-    public void feedWithFood(CannedFood cannedFood) {
-        if (cannedFood == null || !cannedFood.isAvailableInStock()) {
-            return;
-        }
-
-        int newHungerLevel = Math.max(0, getHungerLevel() - 4);
-        setHungerLevel(newHungerLevel);
-
-        int newMoodLevel = Math.min(10, getMoodLevel() + 2);
-        setMoodLevel(newMoodLevel);
-
-        if ("Large".equals(cannedFood.getCanSize())) {
-            this.weight += 0.2;
-        } else {
-            this.weight += 0.1;
-        }
-
-        if (cannedFood.getFlavour() != null &&
-            cannedFood.getFlavour().toLowerCase().contains(getFavouriteFood().toLowerCase())) {
-            setMoodLevel(Math.min(10, getMoodLevel() + 1));
-        }
-    }
-
     @Override
     public void sound() {
         System.out.println("*Woof Woof*");
@@ -75,5 +52,30 @@ public class Dog extends Animal{
                 "breed  =  " + breed + '\n' +
                 "size  =  " + size + '\n' +
                 "weight  =  " + String.format("%.1f", weight) + " kg\n\n";
+    }
+
+    public void feedWithFood(AnimalFood food) {
+        if (food == null || !food.isAvailableInStock()) {
+            return;
+        }
+
+        if (food instanceof WetFood) {
+            int newHungerLevel = Math.max(0, getHungerLevel() - 4);
+            setHungerLevel(newHungerLevel);
+
+            int newMoodLevel = Math.min(10, getMoodLevel() + 2);
+            setMoodLevel(newMoodLevel);
+
+            this.weight += 0.3;
+            setScareLevel(Math.max(0, getScareLevel() - 1));
+        } else if (food instanceof DogFood) {
+            DogFood dogFood = (DogFood) food;
+            int hungerReduction = dogFood.getCalories() / 100;
+            int newHungerLevel = Math.max(0, getHungerLevel() - hungerReduction);
+            setHungerLevel(newHungerLevel);
+
+            double weightGain = dogFood.getCalories() * 0.001;
+            this.weight += weightGain;
+        }
     }
 }

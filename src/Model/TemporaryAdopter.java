@@ -40,7 +40,6 @@ public class TemporaryAdopter extends Adopter{
 
     @Override
     public void isSureAboutAdoption() {
-        // Calculate the difference in days between the two dates
         long daysDifference = ChronoUnit.DAYS.between(AdoptionStartDate, AdoptionEndDate);
 
         if (daysDifference < 30) {
