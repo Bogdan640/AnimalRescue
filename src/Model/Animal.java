@@ -1,6 +1,6 @@
 package Model;
 
-public class Animal {
+public abstract class Animal {
 
 
     private String name;
@@ -84,9 +84,7 @@ public class Animal {
 
 
 
-    public void sound() {
-        System.out.println("*Animal specific gibberish noise*");
-    }
+    public abstract void sound();
 
 
 

@@ -1,6 +1,6 @@
 package Model;
 
-public class RecreationalActivity {
+public abstract class RecreationalActivity {
     private String name;
 
     public RecreationalActivity() {
@@ -19,10 +19,7 @@ public class RecreationalActivity {
     }
 
 
-    public void getInstructions() {
-        System.out.println("Instructions for " + this.name + ":");
-        System.out.println("1. Enjoy");
-    }
+    public abstract void getInstructions() ;
 
 
     @Override
