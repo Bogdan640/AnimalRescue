@@ -19,6 +19,26 @@ public class Duck extends Bird {
         this.speed = speed;
     }
 
+    public void performSwimming(OutdoorRecreationalActivity activity) {
+        if (activity == null) {
+            return;
+        }
+
+        if (activity.getLocation() != null && activity.getLocation().toLowerCase().contains("water")) {
+            int newMoodLevel = Math.min(10, getMoodLevel() + 4);
+            setMoodLevel(newMoodLevel);
+
+            int newHealthLevel = Math.min(10, getHealthLevel() + 2);
+            setHealthLevel(newHealthLevel);
+        } else {
+            int newMoodLevel = Math.min(10, getMoodLevel() + 1);
+            setMoodLevel(newMoodLevel);
+        }
+
+        int newHungerLevel = Math.min(10, getHungerLevel() + 1);
+        setHungerLevel(newHungerLevel);
+    }
+
     @Override
     public void sound() {
         System.out.println("*Quack Quack*");

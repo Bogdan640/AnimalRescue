@@ -104,5 +104,65 @@ public class App {
         duck2.sound();
 
 
+
+        System.out.println("Dog initial stats:");
+        System.out.println("Hunger: " + dog2.getHungerLevel() + ", Mood: " + dog2.getMoodLevel() + ", Weight: " + dog2.getWeight());
+
+        CannedFood meatFood = new CannedFood();
+        meatFood.setName("Premium Meat");
+        meatFood.setPrice(35);
+        meatFood.setQuantity(20);
+        meatFood.setExpirationDate(LocalDate.of(2025, 10, 15));
+        meatFood.setAvailableInStock(true);
+        meatFood.setCanSize("Large");
+        meatFood.setFlavour("beef meat");
+
+        dog2.feedWithFood(meatFood);
+        System.out.println("After feeding - Hunger: " + dog2.getHungerLevel() + ", Mood: " + dog2.getMoodLevel() + ", Weight: " + dog2.getWeight());
+        System.out.println();
+
+        System.out.println("Cat initial stats:");
+        System.out.println("Mood: " + cat2.getMoodLevel() + ", Health: " + cat2.getHealthLevel());
+
+        cat2.receivePets(careTaker);
+        System.out.println("After pets - Mood: " + cat2.getMoodLevel() + ", Health: " + cat2.getHealthLevel());
+        System.out.println();
+
+
+        System.out.println("Bird initial stats:");
+        System.out.println("Hunger: " + bird2.getHungerLevel() + ", Health: " + bird2.getHealthLevel() + ", Weight: " + bird2.getWeight());
+
+        DryFood seeds = new DryFood();
+        seeds.setName("Mixed Seeds");
+        seeds.setPrice(15);
+        seeds.setQuantity(50);
+        seeds.setExpirationDate(LocalDate.of(2026, 3, 20));
+        seeds.setAvailableInStock(true);
+        seeds.setBagSize("Small");
+        seeds.setFlavour("Sunflower");
+
+        bird2.eatSeeds(seeds);
+        System.out.println("After eating seeds - Hunger: " + bird2.getHungerLevel() + ", Health: " + bird2.getHealthLevel() + ", Weight: " + bird2.getWeight());
+        System.out.println();
+
+
+
+
+        System.out.println("Duck initial stats:");
+        System.out.println("Mood: " + duck2.getMoodLevel() + ", Health: " + duck2.getHealthLevel() + ", Hunger: " + duck2.getHungerLevel());
+
+        OutdoorRecreationalActivity swimming = new OutdoorRecreationalActivity();
+        swimming.setName("Swimming");
+        swimming.setLocation("Lake with water");
+
+        duck2.performSwimming(swimming);
+        System.out.println("After water swimming - Mood: " + duck2.getMoodLevel() + ", Health: " + duck2.getHealthLevel() + ", Hunger: " + duck2.getHungerLevel());
+
+
+
+        System.out.println(dog2);
+        System.out.println(cat2);
+        System.out.println(bird2);
+        System.out.println(duck2);
     }
 }
