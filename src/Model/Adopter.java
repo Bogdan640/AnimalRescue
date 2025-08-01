@@ -28,6 +28,10 @@ public class Adopter {
         this.availableMoney = availableMoney;
     }
 
+    public void isSureAboutAdoption(){
+        System.out.println("Maybe");
+    }
+
     @Override
     public String toString() {
         return "Adopter:  " + "\n\n" +

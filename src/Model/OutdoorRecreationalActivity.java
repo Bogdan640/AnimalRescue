@@ -20,6 +20,12 @@ public class OutdoorRecreationalActivity extends RecreationalActivity {
     }
 
     @Override
+    public void getInstructions() {
+        System.out.println("Step 1. Don't let the animals to touch kids, they are dirty");
+        System.out.println("Step 2. Enjoy");
+    }
+
+    @Override
     public String toString() {
         return "OutdoorRecreationalActivity:  " + "\n\n" +
                 super.toString() +

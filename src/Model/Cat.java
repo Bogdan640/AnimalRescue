@@ -31,6 +31,12 @@ public class Cat extends Animal {
     }
 
     @Override
+    public void sound(){
+        System.out.println("*Meoowww");
+    }
+
+
+    @Override
     public String toString() {
         return "Cat:  " + "\n\n" +
                 super.toString() +

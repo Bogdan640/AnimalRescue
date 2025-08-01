@@ -20,6 +20,13 @@ public class CareTaker extends Employee{
         this.shift = shift;
     }
 
+
+
+    @Override
+    public void performDuties() {
+        System.out.println("Taking care of the animals...");
+    }
+
     @Override
     public String toString() {
         return "CareTaker:  " + "\n\n" +

@@ -20,6 +20,11 @@ public class PermanentAdopter extends Adopter{
     }
 
     @Override
+    public void isSureAboutAdoption() {
+        System.out.println("Yes");
+    }
+
+    @Override
     public String toString() {
         return "PermanentAdopter:  " + "\n\n" +
                 super.toString() +

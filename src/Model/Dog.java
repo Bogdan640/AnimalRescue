@@ -31,6 +31,11 @@ public class Dog extends Animal{
     }
 
     @Override
+    public void sound() {
+        System.out.println("*Woof Woof*");
+    }
+
+    @Override
     public String toString() {
         return "Dog:  " + "\n\n" +
                 super.toString() +

@@ -61,6 +61,12 @@ public class AnimalFood {
         this.availableInStock = availableInStock;
     }
 
+
+    public void description() {
+        System.out.println("This is an animal food product.");
+    }
+
+
     @Override
     public String toString() {
         return "AnimalFood:  " + "\n\n" +

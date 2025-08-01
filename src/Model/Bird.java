@@ -31,6 +31,11 @@ public class Bird extends Animal {
     }
 
     @Override
+    public void sound() {
+        System.out.println("*Gibberish bird sound*");
+    }
+
+    @Override
     public String toString() {
         return "Bird:  " + "\n\n" +
                 super.toString() +

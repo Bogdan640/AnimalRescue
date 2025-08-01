@@ -19,6 +19,12 @@ public class JuniorVeterinarian extends Veterinarian{
         this.mentorName = mentorName;
     }
 
+
+    @Override
+    public void performCheckup() {
+        System.out.println("Assisting in checkup under the guidance of " + mentorName + "...");
+    }
+
     @Override
     public String toString() {
         return "JuniorVeterinarian:  " + "\n\n" +

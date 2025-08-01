@@ -82,6 +82,20 @@ public class Animal {
         this.favouriteRecreationalActivity = favouriteRecreationalActivity;
     }
 
+
+
+    public void sound() {
+        System.out.println("*Animal specific gibberish noise*");
+    }
+
+
+
+
+
+
+
+
+
     @Override
     public String toString() {
         return "Animal: " + "\n\n" +

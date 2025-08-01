@@ -34,6 +34,14 @@ public class DryFood extends AnimalFood{
         this.flavour = flavour;
 
     }
+
+
+    @Override
+    public void description() {
+        System.out.println("*This is dry food, serve with a bit of toilet water...*");
+    }
+
+
     @Override
     public String toString() {
         return "DryFood:  " + "\n\n" +
