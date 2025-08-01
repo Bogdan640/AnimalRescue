@@ -3,14 +3,12 @@ package Model;
 public class Employee {
 
     private String name;
-    private String position;
     private double salary;
 
     public Employee() {}
 
-    public Employee(String name, String position, double salary) {
+    public Employee(String name, double salary) {
         this.name = name;
-        this.position = position;
         this.salary = salary;
     }
 
@@ -22,13 +20,6 @@ public class Employee {
         this.name = name;
     }
 
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
 
     public double getSalary() {
         return salary;
@@ -42,7 +33,6 @@ public class Employee {
     public String toString() {
         return "Employee:  " + "\n\n" +
                 "name  =  " + name + '\n' +
-                "position  =  " + position + '\n' +
                 "salary  =  " + salary + "\n\n";
     }
 }
