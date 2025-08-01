@@ -2,7 +2,7 @@ package Model;
 
 import java.time.LocalDate;
 
-public class AnimalFood {
+public abstract class AnimalFood {
     private String name;
     private double price;
     private int quantity;
@@ -62,9 +62,7 @@ public class AnimalFood {
     }
 
 
-    public void description() {
-        System.out.println("This is an animal food product.");
-    }
+    public abstract void description() ;
 
 
     @Override

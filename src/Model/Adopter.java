@@ -1,6 +1,6 @@
 package Model;
 
-public class Adopter {
+public abstract class Adopter {
     private String name;
     private double availableMoney;
 
@@ -28,9 +28,7 @@ public class Adopter {
         this.availableMoney = availableMoney;
     }
 
-    public void isSureAboutAdoption(){
-        System.out.println("Maybe");
-    }
+    public abstract void isSureAboutAdoption();
 
     @Override
     public String toString() {

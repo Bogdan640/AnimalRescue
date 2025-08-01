@@ -1,6 +1,6 @@
 package Model;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private double salary;
@@ -30,9 +30,7 @@ public class Employee {
     }
 
 
-    public void performDuties() {
-        System.out.println("Performing duties...");
-    }
+    public abstract void performDuties() ;
 
     @Override
     public String toString() {
