@@ -20,6 +20,12 @@ public class IndoorRecreationalActivity extends RecreationalActivity{
     }
 
     @Override
+    public void getInstructions() {
+        System.out.println("Step 1. Don't break the walls");
+        System.out.println("Step 2. Enjoy");
+    }
+
+    @Override
     public String toString() {
         return "IndoorRecreationalActivity:  " + "\n\n" +
                 super.toString() +

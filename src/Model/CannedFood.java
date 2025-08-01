@@ -33,6 +33,13 @@ public class CannedFood extends AnimalFood {
         this.flavour = flavour;
 
     }
+
+    @Override
+    public void description() {
+        System.out.println("*This is canned food, can last generations...*");
+    }
+
+
     @Override
     public String toString() {
         return "CannedFood:  " + "\n\n" +

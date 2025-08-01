@@ -20,6 +20,11 @@ public class SeniorVeterinarian extends Veterinarian{
     }
 
     @Override
+    public void performCheckup() {
+        System.out.println("Performing advanced checkup for animals...");
+    }
+
+    @Override
     public String toString() {
         return "SeniorVeterinarian:  " + "\n\n" +
                 super.toString() +

@@ -21,6 +21,11 @@ public class Manager extends Employee {
     }
 
     @Override
+    public void performDuties() {
+        System.out.println("Managing the department...");
+    }
+
+    @Override
     public String toString() {
         return "Manager:  " + "\n\n" +
                 super.toString() +

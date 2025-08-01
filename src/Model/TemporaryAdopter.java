@@ -1,5 +1,6 @@
 package Model;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 
 public class TemporaryAdopter extends Adopter{
@@ -36,6 +37,23 @@ public class TemporaryAdopter extends Adopter{
     public void setReasonForTemporaryAdoption(String reasonForTemporaryAdoption) {
         this.reasonForTemporaryAdoption = reasonForTemporaryAdoption;
     }
+
+    @Override
+    public void isSureAboutAdoption() {
+        // Calculate the difference in days between the two dates
+        long daysDifference = ChronoUnit.DAYS.between(AdoptionStartDate, AdoptionEndDate);
+
+        if (daysDifference < 30) {
+            System.out.println("No");
+        } else if (daysDifference > 30 && daysDifference < 365) {
+            System.out.println("Maybe");
+        } else if(daysDifference >= 365){
+            System.out.println("Yes");
+        }
+    }
+
+
+
     @Override
     public String toString() {
         return "TemporaryAdopter:  " + "\n\n" +

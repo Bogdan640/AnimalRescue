@@ -29,6 +29,11 @@ public class Employee {
         this.salary = salary;
     }
 
+
+    public void performDuties() {
+        System.out.println("Performing duties...");
+    }
+
     @Override
     public String toString() {
         return "Employee:  " + "\n\n" +

@@ -28,6 +28,11 @@ public class Veterinarian {
         this.specialization = specialization;
     }
 
+
+    public void performCheckup() {
+        System.out.println("Performing checkup for some animals...");
+    }
+
     @Override
     public String toString() {
         return "Veterinarian:  " + "\n\n" +

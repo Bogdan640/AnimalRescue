@@ -20,6 +20,11 @@ public class Duck extends Bird {
     }
 
     @Override
+    public void sound() {
+        System.out.println("*Quack Quack*");
+    }
+
+    @Override
     public String toString() {
         return "Duck:  " + "\n\n" +
                 super.toString() +

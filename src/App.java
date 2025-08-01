@@ -26,15 +26,15 @@ public class App {
 //        System.out.println(game);
 //
 //
-//        Animal animal2 = new Animal();
-//        animal2.setName("Cuțu");
-//        animal2.setAge(5);
-//        animal2.setHealthLevel(8);
-//        animal2.setHungerLevel(2);
-//        animal2.setMoodLevel(7);
-//        animal2.setFavouriteFood("pizza");
-//        animal2.setFavouriteRecreationalActivity("sleeping");
-//        System.out.println(animal2);
+        Animal animal2 = new Animal();
+        animal2.setName("Cuțu");
+        animal2.setAge(5);
+        animal2.setHealthLevel(8);
+        animal2.setHungerLevel(2);
+        animal2.setMoodLevel(7);
+        animal2.setFavouriteFood("pizza");
+        animal2.setFavouriteRecreationalActivity("sleeping");
+        System.out.println(animal2);
 //
 //        Adopter adopter2 = new Adopter();
 //        adopter2.setName("Bogdan");
@@ -179,13 +179,11 @@ public class App {
         System.out.println(careTaker);
 
 
-
-
-
-
-
-
-
+        animal2.sound();
+        cat2.sound();
+        dog2.sound();
+        bird2.sound();
+        duck2.sound();
 
 
     }
